@@ -1,12 +1,19 @@
-import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-nordea-dialog',
+  selector: 'nordea-dialog',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './nordea-dialog.component.html',
-  styleUrl: './nordea-dialog.component.css',
+  styleUrl: './nordea-dialog.component.scss',
 })
 export class NordeaDialogComponent {
-  @Input() title: string;
+  @Input() isOpen: boolean = false;
+  @Input() title: string = 'Dialog Title';
+  @Output() close = new EventEmitter<void>();
+
+  closeDialog() {
+    this.close.emit();
+  }
 }

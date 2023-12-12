@@ -1,1 +1,14 @@
-<p>nordea-dialog works!</p>
+<div class="dialog-overlay" *ngIf="isOpen">
+  <div class="dialog">
+    <div class="dialog-header">
+      <h2>{{ title }}</h2>
+      <button (click)="closeDialog()">X</button>
+    </div>
+    <div class="dialog-content">
+      <ng-content></ng-content>
+    </div>
+    <div class="dialog-actions">
+      <ng-content select="[nordea-dialog-actions]"></ng-content>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  height: 5rem;
+  max-width: var(--app-max-width);
+  padding: var(--app-size-m);
+
+  .logo {
+    max-width: 9.2rem;
+  }
+}
