@@ -1,0 +1,50 @@
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--app-size-m);
+  position: relative;
+  max-width: var(--app-container-max-width);
+  margin: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: var(--app-size-4xl);
+
+  h1 {
+    margin-top: var(--app-size-m);
+    font-size: var(--app-font-size-5xl);
+  }
+
+  .examples {
+    margin-top: var(--app-size-l);
+
+    .dialog-trigger {
+      margin: 0 var(--app-size-3xs) var(--app-size-2xs);
+    }
+  }
+
+  .example-login-form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      margin-top: var(--app-size-m);
+      padding: var(--app-size-3xs) var(--app-size-xs);
+      border: 1px solid var(--gray-700);
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+    h1 {
+      font-size: var(--app-font-size-3xl);
+    }
+  }
+}
