@@ -1,6 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
-
+// Global styles
 :root {
+  /* Colors */
   --bright-blue: oklch(51.01% 0.274 263.83);
   --electric-violet: oklch(53.18% 0.28 296.97);
   --french-violet: oklch(47.66% 0.246 305.88);
@@ -8,15 +8,57 @@
   --hot-red: oklch(61.42% 0.238 15.34);
   --orange-red: oklch(63.32% 0.24 31.68);
 
+  --black: #000;
   --gray-900: oklch(19.37% 0.006 300.98);
   --gray-700: oklch(36.98% 0.014 302.71);
   --gray-400: oklch(70.9% 0.015 304.04);
+  --white: #fff;
 
-  --app-max-width: 1280px;
+  /* Neutral Color */
 
-  --app-size-s: 0.875rem; // 14px
-  --app-size-m: 1rem; // 16px
-  --app-size-l: 1.25rem; // 20px
+  /* Size and Spacing */
+  --app-size-4xs: 0.125rem; /* 2px */
+  --app-size-3xs: 0.25rem; /* 4px */
+  --app-size-2xs: 0.5rem; /* 8px */
+  --app-size-xs: 0.75rem; /* 12px */
+  --app-size-s: 0.875rem; /* 14px */
+  --app-size-m: 1rem; /* 16px */
+  --app-size-l: 1.25rem; /* 20px */
+  --app-size-xl: 1.5rem; /* 24px */
+  --app-size-2xl: 2rem; /* 32px */
+  --app-size-3xl: 2.5rem; /* 40px */
+  --app-size-4xl: 3rem; /* 48px */
+  --app-size-5xl: 4rem; /* 64px */
+  --app-size-6xl: 5rem; /* 80px */
+
+  /* Font sizes */
+  --app-font-size-2xs: 0.5rem; /* 8px */
+  --app-font-size-xs: 0.625rem; /* 10px */
+  --app-font-size-s: 0.75rem; /* 12px */
+  --app-font-size-m: 0.875rem; /* 14px */
+  --app-font-size-l: 1rem; /* 16px */
+  --app-font-size-xl: 1.25rem; /* 20px */
+  --app-font-size-2xl: 1.5rem; /* 24px */
+  --app-font-size-3xl: 1.75rem; /* 28px */
+  --app-font-size-4xl: 2rem; /* 32px */
+  --app-font-size-5xl: 3rem; /* 48px */
+  --app-font-size-6xl: 4rem; /* 64px */
+
+  /* Border radius */
+  --app-border-radius-xs: 0.125rem; /* 2px */
+  --app-border-radius-s: 0.25rem; /* 4px */
+  --app-border-radius-m: 0.375rem; /* 6px */
+  --app-border-radius-l: 0.5rem; /* 8px */
+  --app-border-radius-circle: 50%;
+
+  /* Z-indexes */
+  --app-index-deep: -1;
+  --app-index-base: 1;
+  --app-index-overlay: 400;
+  --app-index-dialog: 500;
+
+  /* Layout */
+  --app-container-max-width: 1280px;
 }
 
 .html,

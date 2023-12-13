@@ -4,28 +4,140 @@
   <div class="content">
     <h1>Nordea dialog examples</h1>
     <div class="examples">
-      <button (click)="openDialog1()">Open Dialog 1</button>
+      <button class="dialog-trigger" nz-button (click)="openDialog1()">{{ dialog1Title }}</button>
+      <button class="dialog-trigger" nz-button (click)="openDialog2()">{{ dialog2Title }}</button>
+      <button class="dialog-trigger" nz-button (click)="openDialog3()">{{ dialog3Title }}</button>
+      <button class="dialog-trigger" nz-button (click)="openDialog4()">{{ dialog4Title }}</button>
+      <button class="dialog-trigger" nz-button (click)="openDialog5()">{{ dialog5Title }}</button>
+      <button class="dialog-trigger" nz-button (click)="openDialog6()">{{ dialog6Title }}</button>
+      <button class="dialog-trigger" nz-button (click)="openDialog7()">{{ dialog7Title }}</button>
 
-      <nordea-dialog [isOpen]="isDialog1Open" [title]="dialog1Title" (close)="closeDialog1()">
-        <!-- Dialog 1 content goes here -->
-        <p>This is the content for Dialog 1.</p>
-        <form>
-          <input type="text" placeholder="type your name" />
-          <input type="text" placeholder="type your password" />
-        </form>
-        <div nordea-dialog-actions>
-          <button (click)="closeDialog1()">Submit</button>
-        </div>
+      <!-- Simple dialog -->
+      <nordea-dialog
+        [opened]="dialog1Visible"
+        [title]="dialog1Title"
+        (dialog-close)="closeDialog1()"
+      >
+        <ng-container nordea-dialog-content>
+          <p>Dialog content</p>
+          <p>Dialog content</p>
+          <p>Dialog content</p>
+        </ng-container>
       </nordea-dialog>
 
-      <button (click)="openDialog2()">Open Dialog 2</button>
+      <!-- Simple dialog with actions -->
+      <nordea-dialog
+        [opened]="dialog2Visible"
+        [title]="dialog2Title"
+        (dialog-close)="closeDialog2()"
+      >
+        <ng-container nordea-dialog-content>
+          <p>Dialog content</p>
+          <p>Dialog content</p>
+          <p>Dialog content</p>
+        </ng-container>
+        <ng-container nordea-dialog-actions>
+          <button (click)="closeDialog2()">Cancel</button>
+          <button (click)="closeDialog2()">Ok</button>
+        </ng-container>
+      </nordea-dialog>
 
-      <nordea-dialog [isOpen]="isDialog2Open" [title]="dialog2Title" (close)="closeDialog2()">
-        <!-- Dialog 2 content goes here -->
-        <p>This is the content for Dialog 2.</p>
-        <div nordea-dialog-actions>
-          <button (click)="submitDialog2()">Submit</button>
-        </div>
+      <!-- Dialog with form fields -->
+      <nordea-dialog
+        [opened]="dialog3Visible"
+        [title]="dialog3Title"
+        (dialog-close)="closeDialog3()"
+      >
+        <ng-container nordea-dialog-content>
+          <form class="example-login-form">
+            <input type="text" placeholder="Type your name" />
+            <input type="text" placeholder="Type your email" />
+            <input type="password" placeholder="Type your password" />
+          </form>
+        </ng-container>
+        <ng-container nordea-dialog-actions>
+          <button (click)="closeDialog3()">Sign up</button>
+        </ng-container>
+      </nordea-dialog>
+
+      <!-- Dialog with third-party elements (ant-design components) -->
+      <nordea-dialog
+        [opened]="dialog4Visible"
+        [title]="dialog4Title"
+        (dialog-close)="closeDialog4()"
+      >
+        <ng-container nordea-dialog-content>
+          <form nz-form (ngSubmit)="submmitDialog4()">
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Please input your username!">
+                <nz-input-group>
+                  <input formControlName="userName" nz-input placeholder="Username" />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Please input your Password!">
+                <nz-input-group>
+                  <input
+                    formControlName="password"
+                    nz-input
+                    type="password"
+                    placeholder="Password"
+                  />
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-control>
+                <label nz-checkbox>Remember password</label>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item hidden>
+              <nz-form-control>
+                <button nz-button>Log in</button>
+              </nz-form-control>
+            </nz-form-item>
+          </form>
+        </ng-container>
+        <ng-container nordea-dialog-actions>
+          <button nz-button nzType="primary" (click)="submmitDialog4()">Log in</button>
+        </ng-container>
+      </nordea-dialog>
+
+      <!-- Small dialog -->
+      <nordea-dialog
+        [opened]="dialog5Visible"
+        [title]="dialog5Title"
+        (dialog-close)="closeDialog5()"
+        size="small"
+      >
+        <ng-container nordea-dialog-content>
+          <p>{{ dialog5Title }} content</p>
+        </ng-container>
+      </nordea-dialog>
+
+      <!-- Medium dialog -->
+      <nordea-dialog
+        [opened]="dialog6Visible"
+        [title]="dialog6Title"
+        (dialog-close)="closeDialog6()"
+        size="medium"
+      >
+        <ng-container nordea-dialog-content>
+          <p>{{ dialog6Title }} content</p>
+        </ng-container>
+      </nordea-dialog>
+
+      <!-- Large dialog -->
+      <nordea-dialog
+        [opened]="dialog7Visible"
+        [title]="dialog7Title"
+        (dialog-close)="closeDialog7()"
+        size="large"
+      >
+        <ng-container nordea-dialog-content>
+          <p>{{ dialog7Title }} content</p>
+        </ng-container>
       </nordea-dialog>
     </div>
   </div>

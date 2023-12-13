@@ -1,11 +1,11 @@
-<div class="dialog-overlay" *ngIf="isOpen">
-  <div class="dialog">
+<div class="dialog-overlay" *ngIf="opened">
+  <div class="dialog" [ngClass]="dialogClasses">
     <div class="dialog-header">
       <h2>{{ title }}</h2>
-      <button (click)="closeDialog()">X</button>
+      <span class="close-icon" nz-icon nzType="close" (click)="close()" nzTheme="outline"></span>
     </div>
     <div class="dialog-content">
-      <ng-content></ng-content>
+      <ng-content select="[nordea-dialog-content]"></ng-content>
     </div>
     <div class="dialog-actions">
       <ng-content select="[nordea-dialog-actions]"></ng-content>
