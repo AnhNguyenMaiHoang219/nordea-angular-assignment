@@ -41,6 +41,8 @@ npm install
 npm run start
 ```
 
+Open http://localhost:4200/ with your browser to try out the "nordea-dialog" examples
+
 ## Build
 
 Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
@@ -48,5 +50,3 @@ Run `npm run build` to build the project. The build artifacts will be stored in 
 ## Running unit tests
 
 Run `npm run test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-Open http://localhost:4200/ with your browser to try out the "nordea-dialog" examples
