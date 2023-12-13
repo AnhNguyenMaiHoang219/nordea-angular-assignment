@@ -1,27 +1,52 @@
-# NordeaAngularAssignment
+# nordea-angular-assigment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+An Angular web application for showcasing nordea-dialog component usage
 
-## Development server
+The live version of the application is available at https://nordea-angular-assignment-hoanganh.vercel.app/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Prerequisites
 
-## Code scaffolding
+- [Node.js 20.10](https://nodejs.org/en/) or later
+- [Git](https://git-scm.com/downloads/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Framework and technologies
+
+- [Angular](https://angular.dev/) framework version 17.0.6
+- [Angular Ant Design](https://ng.ant.design/docs/introduce/en): Used as the third-party UI component library, that can help testing with "nordea-dialog" component
+- [Prettier](https://prettier.io/): Code formatter
+
+## Installation instruction
+
+- Clone this repository.
+
+```sh
+git clone git@github.com:AnhNguyenMaiHoang219/nordea-angular-assignment.git
+```
+
+- Go to the project.
+
+```sh
+cd nordea-angular-assignment
+```
+
+- Install dependencies
+
+```sh
+npm install
+```
+
+- Run the dev server
+
+```sh
+npm run start
+```
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `npm run test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Open http://localhost:4200/ with your browser to try out the "nordea-dialog" examples
