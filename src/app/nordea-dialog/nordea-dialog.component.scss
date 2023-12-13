@@ -100,11 +100,9 @@
   z-index: var(--app-index-overlay);
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .dialog {
-    width: 100%;
-    min-width: auto;
-    max-width: calc(100vw - 16px);
-    margin: 8px auto;
+    max-width: calc(100vw - var(--app-size-m));
+    margin: var(--app-size-2xs) auto;
   }
 }
